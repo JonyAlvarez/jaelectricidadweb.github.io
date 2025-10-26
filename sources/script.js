@@ -1,5 +1,24 @@
 
+function UpAutomatic(){
 
+        // boton automatico subir
+        const btn = document.getElementById('toTopBtn');
+
+        // Al hacer clic, subir con efecto suave
+        btn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mostrar solo cuando se baja un poco
+        window.addEventListener('scroll', () => {
+          btn.style.display = window.scrollY > 200 ? 'block' : 'none';
+        });
+
+        // Oculto al inicio
+        btn.style.display = 'none';
+        // boton automatico subir fin
+
+}
 
 
 

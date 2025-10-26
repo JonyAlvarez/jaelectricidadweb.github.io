@@ -50,7 +50,7 @@
               <a class="nav-link" href="#trabajos">trabajos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://wa.me/5492236691009"  target="_blank">contacto</a>
+              <a class="nav-link" href="https://wa.me/5492236691009" target="_blank">contacto</a>
             </li>
           </ul>
         </div>
@@ -281,16 +281,16 @@
           </div>
         </div>
       </nav>
-<!-- 🔹 Modal -->
-<!-- 🔹 Modal con botón adaptable -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content position-relative bg-transparent border-0 shadow-none">
-      <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Cerrar">&times;</button>
-      <img id="modalImage" src="" alt="Imagen ampliada" class="img-fluid rounded shadow">
-    </div>
-  </div>
-</div>
+      <!-- 🔹 Modal -->
+      <!-- 🔹 Modal con botón adaptable -->
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content position-relative bg-transparent border-0 shadow-none">
+            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Cerrar">&times;</button>
+            <img id="modalImage" src="" alt="Imagen ampliada" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
 
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -298,30 +298,23 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+      <script src="sources/script.js"></script>
+
+      <!-- boton para subir-->
+      <button id="toTopBtn" class="btn btn-light position-fixed bottom-0 end-0 m-4 rounded-circle shadow">
+        <i class="bi bi-arrow-up"></i>
+
+      </button>
+      <!-- boton para subir-->
       <script>
         // al hacer clic, mostrar la imagen en el modal
         CarouselIMG();
-        menu()
-        Wbutton()
-        // boton automatico subir
-        const btn = document.getElementById('toTopBtn');
+        menu();
+        Wbutton();
+        UpAutomatic();
+        btnModal();
+        closeCarousel();
 
-        // Al hacer clic, subir con efecto suave
-        btn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Mostrar solo cuando se baja un poco
-        window.addEventListener('scroll', () => {
-          btn.style.display = window.scrollY > 200 ? 'block' : 'none';
-        });
-
-        // Oculto al inicio
-        btn.style.display = 'none';
-        // boton automatico subir fin
-
-btnModal()
-closeCarousel()
       </script>
       <a href="https://wa.me/5492236691009" target="_blank" id="btnWhatsapp" class="btn-whatsapp">
         <i class="fab fa-whatsapp"></i> ¡Contactame!
