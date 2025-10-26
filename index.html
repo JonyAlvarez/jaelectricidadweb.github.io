@@ -26,9 +26,7 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -52,7 +50,7 @@
               <a class="nav-link" href="#trabajos">trabajos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contacto">contacto</a>
+              <a class="nav-link" href="https://wa.me/5492236691009"  target="_blank">contacto</a>
             </li>
           </ul>
         </div>
@@ -283,19 +281,18 @@
           </div>
         </div>
       </nav>
-      <!-- 🔹 Modal -->
-      <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <img id="modalImage" src="" alt="Imagen ampliada" class="img-fluid rounded shadow">
-          </div>
-        </div>
-      </div>
+<!-- 🔹 Modal -->
+<!-- 🔹 Modal con botón adaptable -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content position-relative bg-transparent border-0 shadow-none">
+      <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Cerrar">&times;</button>
+      <img id="modalImage" src="" alt="Imagen ampliada" class="img-fluid rounded shadow">
+    </div>
+  </div>
+</div>
 
-      <!-- 🔹 Botón flotante Volver arriba -->
-      <button id="toTopBtn" class="btn btn-light position-fixed bottom-0 end-0 m-4 rounded-circle shadow">
-        <i class="bi bi-arrow-up"></i>
-      </button>
+
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <script src="sources/script.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -323,13 +320,12 @@
         btn.style.display = 'none';
         // boton automatico subir fin
 
-
-
-
+btnModal()
+closeCarousel()
       </script>
       <a href="https://wa.me/5492236691009" target="_blank" id="btnWhatsapp" class="btn-whatsapp">
-  <i class="fab fa-whatsapp"></i> ¡Contactame!
-</a>
+        <i class="fab fa-whatsapp"></i> ¡Contactame!
+      </a>
 </body>
 
 </section>
