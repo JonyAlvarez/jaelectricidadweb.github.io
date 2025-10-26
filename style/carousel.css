@@ -1,0 +1,43 @@
+/* --- CARRUSEL --- */
+    .brand-carousel {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      max-width: 1200px;
+      display: flex;
+      justify-content: center;  
+      align-items: center;
+    }
+
+    .brand-carousel-track {
+      display: inline-flex;
+      animation: scroll 60s linear infinite;
+    }
+
+    .brand-carousel img {
+      height: 233px;
+      margin: 0 30px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .brand-carousel img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      75% { transform: translateX(-50%); }
+    }
+
+    /* --- Ajustes visuales para el modal --- */
+    .modal-content {
+      background: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }

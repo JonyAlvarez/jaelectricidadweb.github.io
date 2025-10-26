@@ -1,0 +1,360 @@
+/* ====== RESETEO GENERAL ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== ESTRUCTURA GENERAL ====== */
+html, body {
+  height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Altura mínima igual al alto de la ventana */
+}
+
+/* ====== ENCABEZADO ====== */
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* ====== MENÚ ====== */
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background: #00aaff; /* Azul eléctrico */
+  transition: width 0.3s ease;
+}
+
+.menu a:hover {
+  color: #00aaff;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* ====== CONTENIDO PRINCIPAL ====== */
+main {
+  flex: 1; /* Ocupa todo el espacio disponible y empuja el footer al fondo */
+}
+
+.hero {
+  background-color: #eee;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.gridH {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  margin: auto;
+  color: #eee;
+  padding: 0, 20px;
+}
+.gridH img {
+  padding-left: 20px;
+  width: 236px;
+  height: auto;
+  align-self: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 20; 
+}
+.card h3 span{
+   color: #0056b3; 
+}
+
+
+.card h3 {
+  margin: 15px 0 10px;
+}
+
+.card p {
+  padding: 0 15px 20px;
+}
+.imaHo {
+  
+  background-image: url('../img/images.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+   aspect-ratio: 16 / 10.6; 
+  transition: background-image 0.3s ease;
+}
+
+.imaHo:hover {
+  background-image: url('../img/600.jpg');
+}
+/* ====== PIE DE PÁGINA ====== */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: auto; /* 🔥 Esto asegura que el footer se pegue abajo */
+}
+
+/* ====== MEDIA QUERIES ====== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gridH img {
+  padding-left: 20px;
+  width: 50%;
+  height: auto;
+}
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+    .gridH img {
+  padding-left: 20px;
+  width: 100%;
+  height: auto;
+}
+ .hero {
+    padding: 40px 15px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480x) {
+
+    .gridH img {
+  padding-left: 20px;
+  width: 100vh;
+  height: 100vh;
+}
+}
+
+
+.hero {
+  background: linear-gradient(to bottom, #f6f7f8, #ffffff);
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: #1b1b1b;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: #0056b3; /* tono acorde al logo azul */
+  font-weight: 700;
+}
+
+.hero h2 {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.hero strong {
+  color: #000;
+  font-weight: 600;
+}
+
+/* banner inicio */
+
+.inicio-banner {
+  position: relative;
+  background: url("../img/fondo-electricidad.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.inicio-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.inicio-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.inicio-contenido h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.inicio-contenido h1 span {
+  color: #00bfff;
+}
+
+.inicio-contenido h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.inicio-contenido p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Botones de contacto */
+.botones-contacto {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-contacto {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+/* WhatsApp */
+.btn-contacto.whatsapp {
+  background-color: #25D366;
+}
+.btn-contacto.whatsapp:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+}
+
+/* Instagram */
+.btn-contacto.instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+.btn-contacto.instagram:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}

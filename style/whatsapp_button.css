@@ -1,0 +1,39 @@
+/* 🔹 Botón flotante de subir */
+
+/* 🔹 Botón flotante de WhatsApp */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 80px; /* encima del botón subir */
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 998;
+}
+
+.btn-whatsapp i {
+  font-size: 1.4rem;
+}
+
+/* 🔹 Estado visible */
+.btn-whatsapp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover */
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+}
